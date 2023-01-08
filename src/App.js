@@ -1,5 +1,5 @@
 import logo from './Images/more-coffee.png';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
