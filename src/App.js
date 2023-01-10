@@ -1,5 +1,4 @@
-import logo from './Images/remixedCoffeeLogo.svg';
-// import logo from './Images/more-coffee.png';
+
 import RemixedCoffeeLogo from './Images/RemixedCoffeLogo';
 import Navigation from './Components/Navigation/Navigtation';
 import './App.scss';
