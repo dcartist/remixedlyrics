@@ -1,14 +1,21 @@
 
+import * as React from 'react';
 import RemixedCoffeeLogo from './Images/RemixedCoffeLogo';
 import Navigation from './Components/Navigation/Navigtation';
 import Index from './Pages/Index';
 import Index1 from './Pages/Index1';
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import './App.scss';
 
 import { PageTransition } from "@steveeeie/react-page-transition";
 
 function App() {
+  let location = useLocation();
+
+  React.useEffect(() => {
+    // Google Analytics
+    // ga('send', 'pageview');
+  }, [location]);
   
   return (
     <div className="App">
@@ -22,7 +29,7 @@ function App() {
                 preset="moveToLeftFromRight"
                 transitionKey={location.pathname}
               >
-   <Routes>
+   <Routes location={location}>
   <Route path="/" element={<Index />}>
   </Route>
   <Route path="index1" element={<Index1 />} />
